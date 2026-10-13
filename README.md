@@ -1,8 +1,8 @@
-<img src="assets/hero.gif" width="100%" alt="pelsynergy — a designer who vibecodes" />
+<img src="assets/hero.gif" width="100%" alt="dithered michael scott" />
 
 <br/>
 
-<p align="center"><i>hi, i'm pelsynergy. i design how things feel, then vibecode them into being.</i></p>
+<p align="center"><b>pelsynergy</b> — <i>design builder.</i><br/><sub>i design how things feel, then vibecode them into being.</sub></p>
 
 <br/>
 
