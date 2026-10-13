@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 200" width="1200" height="200">
+  <defs>
+    <clipPath id="c"><rect width="1200" height="200" rx="24"/></clipPath>
+    <style>
+      .n { font-family: ui-monospace,'SF Mono',Menlo,Consolas,monospace; font-size: 13px; letter-spacing: 2px; fill: #0A0A0F; fill-opacity: .5; }
+      .t { font-family: 'Helvetica Neue','Inter','Segoe UI',Arial,sans-serif; font-weight: 900; font-size: 40px; letter-spacing: -1.5px; fill: #0A0A0F; }
+      .d { font-family: ui-monospace,'SF Mono',Menlo,Consolas,monospace; font-size: 14px; fill: #0A0A0F; fill-opacity: .7; }
+      .step { animation: pop 6s ease-in-out infinite; }
+      .s2 { animation-delay: 1.5s; } .s3 { animation-delay: 3s; } .s4 { animation-delay: 4.5s; }
+      @keyframes pop { 0%,100% { opacity: .35; } 8%,25% { opacity: 1; } 33% { opacity: .35; } }
+    </style>
+  </defs>
+  <g clip-path="url(#c)">
+    <rect width="1200" height="200" fill="#F3EEE4"/>
+    <g class="step"><text x="50" y="62" class="n">01</text><text x="50" y="118" class="t">feel it</text><text x="50" y="150" class="d">mood, vibe, references</text></g>
+    <text x="300" y="116" class="t" fill-opacity=".25">→</text>
+    <g class="step s2"><text x="350" y="62" class="n">02</text><text x="350" y="118" class="t">sketch it</text><text x="350" y="150" class="d">figma, paper, chaos</text></g>
+    <text x="620" y="116" class="t" fill-opacity=".25">→</text>
+    <g class="step s3"><text x="670" y="62" class="n">03</text><text x="670" y="118" class="t">prompt it</text><text x="670" y="150" class="d">vibecode the thing</text></g>
+    <text x="935" y="116" class="t" fill-opacity=".25">→</text>
+    <g class="step s4"><text x="985" y="62" class="n">04</text><text x="985" y="118" class="t" fill="#FF4D8D">polish</text><text x="985" y="150" class="d">until it feels right</text></g>
+  </g>
+</svg>

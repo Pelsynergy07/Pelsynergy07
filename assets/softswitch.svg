@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="600" height="380">
+  <defs>
+    <clipPath id="c"><rect width="600" height="380" rx="24"/></clipPath>
+  </defs>
+  <g clip-path="url(#c)">
+    <rect width="600" height="380" fill="#6D5BFF"/>
+    <!-- two tracks crossfading -->
+    <g fill="none" stroke-width="5" stroke-linecap="round">
+      <path d="M40 150 C 80 100, 120 200, 160 150 S 240 100, 280 150 S 360 200, 400 150 S 480 100, 520 150 S 600 200, 640 150" stroke="#FFB547">
+        <animate attributeName="stroke-opacity" values="1;1;0;0;1" keyTimes="0;.35;.5;.85;1" dur="5s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="translate" values="0 0;-120 0" dur="2.5s" repeatCount="indefinite"/>
+      </path>
+      <path d="M40 150 C 70 80, 100 220, 130 150 S 190 80, 220 150 S 280 220, 310 150 S 370 80, 400 150 S 460 220, 490 150 S 550 80, 580 150 S 640 220, 670 150" stroke="#2EE6C5">
+        <animate attributeName="stroke-opacity" values="0;0;1;1;0" keyTimes="0;.35;.5;.85;1" dur="5s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="translate" values="0 0;-90 0" dur="2.5s" repeatCount="indefinite"/>
+      </path>
+    </g>
+    <!-- fake play head -->
+    <g font-family="ui-monospace,Menlo,Consolas,monospace" font-size="12" fill="#ffffff" letter-spacing="1">
+      <text x="40" y="225" fill-opacity="0.7">▶ song a</text>
+      <text x="560" y="225" text-anchor="end" fill-opacity="0.7">song b ▶</text>
+      <rect x="40" y="236" width="520" height="3" rx="1.5" fill="#ffffff" fill-opacity="0.25"/>
+      <rect x="40" y="236" width="0" height="3" rx="1.5" fill="#ffffff"><animate attributeName="width" values="0;520" dur="5s" repeatCount="indefinite"/></rect>
+    </g>
+    <text x="40" y="52" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="13" letter-spacing="2" fill="#ffffff" fill-opacity="0.7">04 — EXTENSION</text>
+    <text x="40" y="290" font-family="'Helvetica Neue','Inter','Segoe UI',Arial,sans-serif" font-weight="900" font-size="54" letter-spacing="-2.5" fill="#ffffff">SoftSwitch</text>
+    <text x="40" y="326" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="15" fill="#ffffff" fill-opacity="0.85">youtube, but the songs crossfade.</text>
+  </g>
+</svg>

@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" width="1200" height="460">
+  <defs>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="60"/>
+    </filter>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.09 0"/>
+    </filter>
+    <clipPath id="frame"><rect width="1200" height="460" rx="28"/></clipPath>
+    <path id="ring" d="M 0,-58 a 58,58 0 1,1 0,116 a 58,58 0 1,1 0,-116"/>
+    <style>
+      .mono { font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; }
+      .display { font-family: 'Helvetica Neue', 'Inter', 'Segoe UI', Arial, sans-serif; font-weight: 900; }
+      .word { animation: rise 1.4s cubic-bezier(.2,.8,.2,1) both; }
+      .sub { animation: fade 1.6s .6s ease both; }
+      .blink { animation: blink 1.1s steps(1) infinite; }
+      @keyframes rise { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+      @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+      @keyframes blink { 50% { opacity: 0; } }
+    </style>
+  </defs>
+
+  <g clip-path="url(#frame)">
+    <rect width="1200" height="460" fill="#0A0A0F"/>
+
+    <!-- drifting colour blobs -->
+    <g filter="url(#blur)" opacity="0.9">
+      <circle cx="260" cy="180" r="170" fill="#FF4D8D">
+        <animate attributeName="cx" values="260;420;300;260" dur="14s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="180;300;120;180" dur="11s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="820" cy="260" r="200" fill="#6D5BFF">
+        <animate attributeName="cx" values="820;680;900;820" dur="16s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="260;160;320;260" dur="12s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="600" cy="380" r="150" fill="#FFB547">
+        <animate attributeName="cx" values="600;500;760;600" dur="13s" repeatCount="indefinite"/>
+        <animate attributeName="r" values="150;190;130;150" dur="9s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="1040" cy="90" r="120" fill="#2EE6C5">
+        <animate attributeName="cy" values="90;200;60;90" dur="10s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+
+    <!-- grain -->
+    <rect width="1200" height="460" filter="url(#grain)"/>
+
+    <!-- corner labels -->
+    <g class="mono" font-size="14" fill="#ffffff" fill-opacity="0.75" letter-spacing="1.5">
+      <text x="44" y="56">✦ PORTFOLIO OF FEELINGS</text>
+      <text x="1156" y="56" text-anchor="end">VOL. 01 — 2026</text>
+      <text x="44" y="420">DESIGNER<tspan fill="#FFB547"> × </tspan>VIBECODER</text>
+      <text x="1156" y="420" text-anchor="end">scroll for things i made <tspan class="blink">▍</tspan></text>
+    </g>
+
+    <!-- name -->
+    <g class="word">
+      <text x="600" y="250" text-anchor="middle" class="display" font-size="172" letter-spacing="-9" fill="#ffffff">pelsynergy</text>
+    </g>
+    <text x="600" y="342" text-anchor="middle" class="mono sub" font-size="18" fill="#ffffff" fill-opacity="0.85" letter-spacing="0.5">i design the feeling first, then vibecode it into existence.</text>
+
+    <!-- spinning badge -->
+    <g transform="translate(1060,300)">
+      <circle r="78" fill="#0A0A0F" fill-opacity="0.55" stroke="#ffffff" stroke-opacity="0.25"/>
+      <g>
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="18s" repeatCount="indefinite"/>
+        <text class="mono" font-size="13" fill="#ffffff" letter-spacing="3.4">
+          <textPath href="#ring">DESIGN · PROMPT · SHIP · REPEAT · </textPath>
+        </text>
+      </g>
+      <text y="9" text-anchor="middle" font-size="26" fill="#FFB547">✦</text>
+    </g>
+  </g>
+</svg>
